@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.tigerorg.dgbug:dgbug-evn-utils:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dgbug-evn-utils/pom.xml!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/dgbug-evn-service/dgbug-evn-utils-1.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dgbug-evn-utils/dgbug-evn-utils-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/dgbug-evn-service/dgbug-evn-utils-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dgbug-evn-utils/dgbug-evn-utils-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

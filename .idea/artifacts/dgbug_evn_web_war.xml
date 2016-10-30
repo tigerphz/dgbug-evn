@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dgbug-evn-web:war">
+    <output-path>$PROJECT_DIR$/dgbug-evn-web/target</output-path>
+    <root id="archive" name="dgbug-evn.war">
+      <element id="artifact" artifact-name="dgbug-evn-web:war exploded" />
+    </root>
+  </artifact>
+</component>

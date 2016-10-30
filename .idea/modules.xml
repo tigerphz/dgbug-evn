@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn.iml" filepath="$PROJECT_DIR$/dgbug-evn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn-core/dgbug-evn-core.iml" filepath="$PROJECT_DIR$/dgbug-evn-core/dgbug-evn-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn-domain/dgbug-evn-domain.iml" filepath="$PROJECT_DIR$/dgbug-evn-domain/dgbug-evn-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn-model/dgbug-evn-model.iml" filepath="$PROJECT_DIR$/dgbug-evn-model/dgbug-evn-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn-persist/dgbug-evn-persist.iml" filepath="$PROJECT_DIR$/dgbug-evn-persist/dgbug-evn-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn-service/dgbug-evn-service.iml" filepath="$PROJECT_DIR$/dgbug-evn-service/dgbug-evn-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn-utils/dgbug-evn-utils.iml" filepath="$PROJECT_DIR$/dgbug-evn-utils/dgbug-evn-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dgbug-evn-web/dgbug-evn-web.iml" filepath="$PROJECT_DIR$/dgbug-evn-web/dgbug-evn-web.iml" />
+    </modules>
+  </component>
+</project>
