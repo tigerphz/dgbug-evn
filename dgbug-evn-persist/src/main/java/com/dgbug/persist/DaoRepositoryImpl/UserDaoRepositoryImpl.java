@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by tiger on 2016-10-29.
  */
-@Repository("UserDaoRepositoryImpl")
+@Repository("userDaoRepositoryImpl")
 public class UserDaoRepositoryImpl implements IUserDaoRepository {
 
     @Autowired
