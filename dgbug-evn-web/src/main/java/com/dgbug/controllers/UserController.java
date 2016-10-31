@@ -1,5 +1,6 @@
 package com.dgbug.controllers;
 
+import com.dgbug.core.jwt.Token;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +14,7 @@ public class UserController {
 
     @RequestMapping("/test")
     @ResponseBody
+    @Token
     public String test() {
         return "tiger hellow world";
     }
