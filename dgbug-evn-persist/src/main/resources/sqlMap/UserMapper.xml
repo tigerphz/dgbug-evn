@@ -3,9 +3,9 @@
 <mapper namespace="com.dgbug.persist.DaoMapper.UserMapper">
   <resultMap id="BaseResultMap" type="com.dgbug.model.User">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="real_name" jdbcType="VARCHAR" property="realName" />
-    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
     <result column="address" jdbcType="VARCHAR" property="address" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
@@ -16,8 +16,8 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, user_name, real_name, nick_name, address, email, phone, avatar, type, status, 
-    create_time, update_time
+    id, username, realname, nickname, address, email, phone, avatar, type, status, create_time, 
+    update_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
@@ -30,12 +30,12 @@
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.dgbug.model.User">
-    insert into t_user (id, user_name, real_name, 
-      nick_name, address, email, 
+    insert into t_user (id, username, realname, 
+      nickname, address, email, 
       phone, avatar, type, status, 
       create_time, update_time)
-    values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR}, 
-      #{nickName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, 
+      #{nickname,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
       #{phone,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}, #{type,jdbcType=BIT}, #{status,jdbcType=BIT}, 
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
@@ -45,14 +45,14 @@
       <if test="id != null">
         id,
       </if>
-      <if test="userName != null">
-        user_name,
+      <if test="username != null">
+        username,
       </if>
-      <if test="realName != null">
-        real_name,
+      <if test="realname != null">
+        realname,
       </if>
-      <if test="nickName != null">
-        nick_name,
+      <if test="nickname != null">
+        nickname,
       </if>
       <if test="address != null">
         address,
@@ -83,14 +83,14 @@
       <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="userName != null">
-        #{userName,jdbcType=VARCHAR},
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
       </if>
-      <if test="realName != null">
-        #{realName,jdbcType=VARCHAR},
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
       </if>
-      <if test="nickName != null">
-        #{nickName,jdbcType=VARCHAR},
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
       </if>
       <if test="address != null">
         #{address,jdbcType=VARCHAR},
@@ -121,14 +121,14 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.dgbug.model.User">
     update t_user
     <set>
-      <if test="userName != null">
-        user_name = #{userName,jdbcType=VARCHAR},
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
       </if>
-      <if test="realName != null">
-        real_name = #{realName,jdbcType=VARCHAR},
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
       </if>
-      <if test="nickName != null">
-        nick_name = #{nickName,jdbcType=VARCHAR},
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
       </if>
       <if test="address != null">
         address = #{address,jdbcType=VARCHAR},
@@ -159,9 +159,9 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.dgbug.model.User">
     update t_user
-    set user_name = #{userName,jdbcType=VARCHAR},
-      real_name = #{realName,jdbcType=VARCHAR},
-      nick_name = #{nickName,jdbcType=VARCHAR},
+    set username = #{username,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      nickname = #{nickname,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
       phone = #{phone,jdbcType=VARCHAR},
