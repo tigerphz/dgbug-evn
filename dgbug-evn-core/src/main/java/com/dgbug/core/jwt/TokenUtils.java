@@ -15,6 +15,8 @@ import org.jose4j.lang.JoseException;
  */
 public class TokenUtils {
     protected static final String ISSUED = "dgbug.com";
+    protected static final String TOKEN_HEAD = "JWT: ";
+
     private static RsaJsonWebKey rsaJsonWebKey;
 
     //生成秘钥工具类
@@ -70,7 +72,7 @@ public class TokenUtils {
         jws.setAlgorithmHeaderValue(AlgorithmIdentifiers.RSA_USING_SHA256);
 
         String jwt = jws.getCompactSerialization();
-        return jwt;
+        return TokenUtils.TOKEN_HEAD + jwt;
     }
 
     //验证方法
@@ -86,6 +88,8 @@ public class TokenUtils {
                 .setExpectedSubject(subject)
                 .setVerificationKey(rsaJsonWebKey.getKey()) // verify the signature with the public key
                 .build(); // create the JwtConsumer instance
+
+        token = token.substring(TokenUtils.TOKEN_HEAD.length());
 
         JwtClaims jwtClaims = jwtConsumer.processToClaims(token);
 

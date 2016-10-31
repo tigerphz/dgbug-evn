@@ -1,5 +1,6 @@
 package com.dgbug.core.jwt;
 
+import org.apache.commons.codec.binary.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.codec.digest.Sha2Crypt;
 import org.jose4j.jwt.JwtClaims;

@@ -35,11 +35,11 @@ public class TokenAspect {
         if (method.isAnnotationPresent(Token.class)) {
             //执行token验证
             final String authHeader = request.getHeader("Authorization");
-            if (authHeader == null || !authHeader.startsWith("taken ")) {
-                throw new ServletException("Missing or invalid Authorization header.");
+            if (authHeader == null || !authHeader.startsWith(TokenUtils.TOKEN_HEAD)) {
+                throw new ServletException("在请求头Authorization中没有找到有效的JWT信息.");
             }
 
-            final String token = authHeader.substring(6); // The part after "taken "
+            final String token = authHeader;
 
             JwtClaims jwtClaims = tokenGenerate.valid(token);
             request.setAttribute("claims", jwtClaims);
